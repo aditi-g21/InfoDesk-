@@ -8,15 +8,13 @@
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300">
 </head>	
 <body>
+<section class="fog">
+	<figure class="absolute-bg" style="background-image: url('fog.jpeg');"></figure>
+	<div class="fog__container">
+	<div class="fog__img fog__img--first"></div>
+	<div class="fog__img fog__img--second"></div>
 
-
-  <section class="fog">
-  <figure class="absolute-bg" style="background-image: url('fog.jpeg');"></figure>
-  <div class="fog__container">
-    <div class="fog__img fog__img--first"></div>
-    <div class="fog__img fog__img--second"></div>
-
-    <div class="page-grid-container">
+	<div class="page-grid-container">
 		<header id="header" class="page-grid-item">
 			<h1 class="heading">Registration Page</h1>
 		</header>
@@ -34,13 +32,11 @@
 				<input type="submit" name="submit" value="Register" id="button"/>
 			</form>
 		</div>
-
-  		<div id ="footer" class="page-grid-item">
-    		<h2> Designed by System Admin in MIT, Manipal</h2> 
- 		</div>
+		<div id ="footer" class="page-grid-item">
+			<h2> Designed by System Admin in MIT, Manipal</h2> 
+		</div>
 	</div>
 </div>
-
 </section>
 </body>
 </html>
