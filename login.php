@@ -21,13 +21,13 @@
 		<form method="post">
 			<div>
 				<h2>System Admin</h2>
-				<input type="text" placeholder="Username" name="sausername" >
-				<input type="password" placeholder="Password" name="sapassword" id="sapassword" >
+				<input type="text" placeholder="Username" name="sausername" id="sys_usr">
+				<input type="password" placeholder="Password" name="sapassword" id="sys_pass" >
 			</div>
 			<div>
 				<h2>Info-Desk Organizer</h2>
-				<input type="text" placeholder="Username" name="infousername" id="infousername" >
-				<input type="password" placeholder="Password" name="infopassword" id="infopassword" >
+				<input type="text" placeholder="Username" name="infousername" id="info_usr" >
+				<input type="password" placeholder="Password" name="infopassword" id="info_pass" >
 			</div>
 			<a href="login.php">
 				<button>log in</button>

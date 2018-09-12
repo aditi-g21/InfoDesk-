@@ -19,14 +19,14 @@
 		$fname=$_POST['fname'];
 		$lname=$_POST['lname'];
 		$phone_no=$_POST['phone'];
-		//delegate number??
 
 		$result = mysqli_query($connect, "SELECT * FROM information WHERE first_name LIKE '%{$fname}%' OR last_name LIKE '%{$lname}%' OR phone_no LIKE '%{$phone_no}%' ");//need to add delegate number
 
 		while ($row = mysqli_fetch_array($result))
 		{
-       		$details_search = $row['first_name'] . " " . $row['last_name'] . " " . $row['reg_no'] . " " . $row['phone_no'] . " " . $row['email'] . " " . $row['clg_name'] . " " . $row['card_type'];
+       		$details_search = $row['first_name']." ".$row['last_name']." ".$row['reg_no']." ".$row['phone_no']." ".$row['email']." ".$row['clg_name']." ".$row['card_type'];
        		//back to main page with output message as details
+       		header("Location: registration.php");
 		}
 	}
 	unset($fname,$lname,$email,$phone_no,$reg_no,$clg_name,$card_type);
