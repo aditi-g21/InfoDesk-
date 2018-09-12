@@ -1,0 +1,14 @@
+CREATE DATABASE details;
+USE details;
+
+CREATE TABLE information(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(32) NOT NULL,
+    last_name VARCHAR(32) NOT NULL,
+    email VARCHAR(32) NOT NULL,
+    reg_no INT UNSIGNED NOT NULL,
+    phone_no BIGINT(10) UNSIGNED NOT NULL,
+    clg_name VARCHAR(50) NOT NULL,
+    card_type INT(1) UNSIGNED NOT NULL
+);
+
