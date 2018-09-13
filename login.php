@@ -30,9 +30,7 @@
 				<input type="text" placeholder="Username" name="infousername" id="info_usr" >
 				<input type="password" placeholder="Password" name="infopassword" id="info_pass" >
 			</div>
-			<a href="login_backend.php">
-				<button>log in</button>
-			</a>
+			<input id="logout" type="button" onclick="location.href='registration.php';" name="logout" value="login" />
 		</form>
 	</div>
 	<div>

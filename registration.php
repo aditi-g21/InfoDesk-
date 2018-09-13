@@ -32,13 +32,9 @@
 			</select>
 			<input id="clg" type="text" name="clg" placeholder="Institution" pattern="[A-Za-z\x26. ]+" required/>
 			<input id="email" type="email" name="email" placeholder="Email Id" required/>
-			<a href="login_backend.php">
-				<button id="logout">log out</button>
-			</a>
-			<input type="submit" name="submit" value="Register" id="button"/>
-			<a href="search.php">
-				<button id="search">search</button>
-			</a>
+			<input id="logout" type="button"  onclick="location.href='login.php';" name="logout" value="logout" />
+			<input id="register" type="submit" name="submit" value="Register"/>
+			<input id="search" type="button"  onclick="location.href='search.php';" name="search" value="search" />
 		</form>
 	</div>
 	<div>

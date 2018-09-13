@@ -18,11 +18,15 @@
 
 	<h1> Infodesk Portal </h1>
 
-	<div class="main">
-		
-			<a href="login_backend.php">
-				<button id="logout">log out</button>
-			</a>
+	<div id="form-container" class="main">
+		<form action="back_info.php" method="POST" name="registration" enctype="multipart/form-data">
+			<input id="fname" type="text" name="fname" placeholder="First Name" pattern="[A-Za-z0-9 ]+"/>
+			<input id="lname" type="text" name="lname" placeholder="Last Name" pattern="[A-Za-z.' ]+" />
+			<input id="phone" type="text" name="phone" placeholder="Phone Number" pattern="[0-9]{10}"/>
+			<input id="del_id" type="text" name="del_id" placeholder="Delegate ID" pattern="[0-9]" />
+			<input id="logout" type="button"  onclick="location.href='login.php';" name="logout" value="logout" />
+			<input id="register" type="button"  onclick="location.href='registration.php';" name="register" value="register" />
+			<input id="search" type="submit" name="submit" value="Search"/>
 		</form>
 	</div>
 	<div>
