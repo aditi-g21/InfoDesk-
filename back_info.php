@@ -1,12 +1,10 @@
 <?php
-
 	session_start();
 	//connecting to database
-	echo "hello world";
 	$dbhost='localhost';
 	$dbuser='root';
 	$dbpass='';
-	$dbname='infodesk';
+	$dbname='details';
 	$connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	if(mysqli_connect_errno())
 	{
@@ -14,21 +12,21 @@
 	}
 
 	//search for the value
-	if(isset($_POST['search']))
-	{
-		$fname=$_POST['fname'];
-		$lname=$_POST['lname'];
-		$phone_no=$_POST['phone'];
+	// if(isset($_POST['search']))
+	// {
+	// 	$fname=$_POST['fname'];
+	// 	$lname=$_POST['lname'];
+	// 	$phone_no=$_POST['phone'];
 
-		$result = mysqli_query($connect, "SELECT * FROM information WHERE first_name LIKE '%{$fname}%' OR last_name LIKE '%{$lname}%' OR phone_no LIKE '%{$phone_no}%' ");//need to add delegate number
+	// 	$result = mysqli_query($connect, "SELECT * FROM information WHERE first_name LIKE '%{$fname}%' OR last_name LIKE '%{$lname}%' OR phone_no LIKE '%{$phone_no}%' ");//need to add delegate number
 
-		while ($row = mysqli_fetch_array($result))
-		{
-			$details_search = $row['first_name']." ".$row['last_name']." ".$row['reg_no']." ".$row['phone_no']." ".$row['email']." ".$row['clg_name']." ".$row['card_type'];
-			//back to main page with output message as details
-			header("Location: registration.php");
-		}
-	}
+	// 	while ($row = mysqli_fetch_array($result))
+	// 	{
+	// 		$details_search = $row['first_name']." ".$row['last_name']." ".$row['reg_no']." ".$row['phone_no']." ".$row['email']." ".$row['clg_name']." ".$row['card_type'];
+	// 		//back to main page with output message as details
+	// 		header("Location: registration.php");
+	// 	}
+	// }
 	unset($fname,$lname,$email,$phone_no,$reg_no,$clg_name,$card_type);
 	//echo isset($_POST['submit']) "T"
 	if(isset($_POST['submit']))
@@ -70,27 +68,27 @@
 		}
 
 		//if everything is there
-		if(isset($fname,$lname,$reg_no,$phone_no,$email,$clg_name,$card_type))
-			$form = true;
+		if(!isset($fname,$lname,$reg_no,$phone_no,$email,$clg_name,$card_type))
+			$form = false;
 		else
 		{
 			//keep whatever the user has already inputed
 			//if something is null it will remain null
-
+			$form = true;
 			$_SESSION['fname'] = $fname;
 			$_SESSION['lname'] = $lname;
 			$_SESSION['reg'] = $reg_no;
 			$_SESSION['clg'] = $clg_name;
 			$_SESSION['card_type'] = $card_type;
 			$_SESSION['phone'] = $phone_no;
-			$_SESSION['em_id'] = $email;
+			$_SESSION['email'] = $email;
 		}
 		
 		if($form==true)
 		{
 			//inserting values
 			$sql = "INSERT INTO information (first_name, last_name, email,reg_no,phone_no,clg_name,card_type)
-				VALUES ($fname,$lname,$email,$reg_no,$phone_no,$clg_name,$card_type)";
+				VALUES ('$fname','$lname','$email','$reg_no','$phone_no','$clg_name','$card_type' )";
 
 			//checking if its done or not
 			if ($connect->query($sql) === true) 

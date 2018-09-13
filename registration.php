@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,12 +18,10 @@
 	<div class="fog__img fog__img--second"></div>
 
 	<h1> Registration Page </h1>
-
 	<div class="indicator fa fa-down-arrow"></div>
 	<div id="form-container" class="main">
 		<form action="back_info.php" method="POST" name="registration" enctype="multipart/form-data">
 			<input id="fname" type="text" name="fname" placeholder="First Name" pattern="[A-Za-z0-9 ]+" required/>
-			<?php echo $_SESSION['fname'] ?>
 			<input id="lname" type="text" name="lname" placeholder="Last Name" pattern="[A-Za-z.' ]+" required/>
 			<input id="reg" type="text" name="reg" placeholder="Registration Number" pattern="[0-9]{9}" required/>
 			<input id="phone" type="text" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" required/>
