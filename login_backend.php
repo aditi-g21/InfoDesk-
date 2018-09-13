@@ -50,8 +50,7 @@
 					if($connect->query($insert))
 						header("Location: registration.php");
 					
-				}
-				
+				}	
 			}
 			else
 			{
