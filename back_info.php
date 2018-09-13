@@ -1,8 +1,8 @@
 <?php
 
 	session_start();
-
 	//connecting to database
+	echo "hello world";
 	$dbhost='localhost';
 	$dbuser='root';
 	$dbpass='';
@@ -30,7 +30,7 @@
 		}
 	}
 	unset($fname,$lname,$email,$phone_no,$reg_no,$clg_name,$card_type);
-	
+	//echo isset($_POST['submit']) "T"
 	if(isset($_POST['submit']))
 	{
 		$form=false;
@@ -49,17 +49,17 @@
 		if(empty($fname))
 			$error_message .="First Name, ";
 		if(empty($lname)
-			$error_message .="Last Name, "
+			$error_message .="Last Name, ";
 		if(empty($email))
-			$error_message .="Email ID, "
+			$error_message .="Email ID, ";
 		if(empty($phone_no))
-			$error_message .="Phone Number, "
+			$error_message .="Phone Number, ";
 		if(empty($reg_no))
-			$error_message .="Registeration Number, "
+			$error_message .="Registration Number, ";
 		if(empty($clg_name))
-			$error_message .="College Name, "
+			$error_message .="College Name, ";
 		if(empty($card_type))
-			$error_message .="Card Type, "
+			$error_message .="Card Type, ";
 		
 		if(!empty($error_message))
 		{
@@ -78,12 +78,11 @@
 			//if something is null it will remain null
 
 			$_SESSION['fname'] = $fname;
-			$_SESSION['fname'] = $lname;
-			$_SESSION['reg_no'] = $reg_no;
-			$_SESSION['clg_name'] = $clg_name;
+			$_SESSION['lname'] = $lname;
+			$_SESSION['reg'] = $reg_no;
+			$_SESSION['clg'] = $clg_name;
 			$_SESSION['card_type'] = $card_type;
-			$_SESSION['insti'] = $institution;
-			$_SESSION['ph_no'] = $phone_no;
+			$_SESSION['phone'] = $phone_no;
 			$_SESSION['em_id'] = $email;
 		}
 		
@@ -107,4 +106,5 @@
 			$_SESSION['message'] = $message;
 		header("Location: registration.php");
 	}
+	header("Location: registration.php");
 ?>
