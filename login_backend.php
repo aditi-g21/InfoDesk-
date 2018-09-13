@@ -45,7 +45,11 @@
 				else
 				{
 					//login status = 1 in database
-					header("Location: registration.php");
+					$insert="INSERT INTO information (status)
+							VALUES ('1')";
+					if($connect->query($insert))
+						header("Location: registration.php");
+					
 				}
 				
 			}
@@ -89,7 +93,7 @@
 			if(empty($indo_pass))
 				$error_message .= "Infodesk password ";
 			$error_message .=" Required!";
-			
+
 			//back to login page with showing the error message
 			$_SESSION['error_message'] = $error_message;
 			header("Location: login.php");
