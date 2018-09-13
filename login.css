@@ -11,6 +11,7 @@ body {
 h2 {
 	font-weight: bold;
 	color: #092601;
+	margin: 2% auto;
 	font-size: 1.2rem;
 	text-transform: uppercase;
 }
@@ -79,7 +80,7 @@ h1 {
 
 #form-container form {
 	display: grid;
-	grid-gap: 2%;
+	grid-gap: .75%;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(7, 1fr);
 }
