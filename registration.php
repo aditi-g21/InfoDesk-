@@ -25,11 +25,20 @@
 			<input id="lname" type="text" name="lname" placeholder="Last Name" pattern="[A-Za-z.' ]+" required/>
 			<input id="reg" type="text" name="reg" placeholder="Registration Number" pattern="[0-9]{9}" required/>
 			<input id="phone" type="text" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" required/>
-			<input id="card_type" type="text" name="card_type" placeholder="Card Type" pattern="[1-3]" required/>
+			<select id="card_type" name="card_type" placeholder="Card Type" required/>
+				<option value="" hidden>Card Type</option>
+				<option value="1">One</option>
+				<option value="2">Two</option>
+			</select>
 			<input id="clg" type="text" name="clg" placeholder="Institution" pattern="[A-Za-z\x26. ]+" required/>
-			<!-- <input id="input-del_id" type="text" name="delegate_id" placeholder="Delegate ID" pattern="[0-9]" required/> -->
 			<input id="email" type="email" name="email" placeholder="Email Id" required/>
+			<a href="login_backend.php">
+				<button id="logout">log out</button>
+			</a>
 			<input type="submit" name="submit" value="Register" id="button"/>
+			<a href="search.php">
+				<button id="search">search</button>
+			</a>
 		</form>
 	</div>
 	<div>
