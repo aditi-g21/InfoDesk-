@@ -24,9 +24,9 @@
 
 		while ($row = mysqli_fetch_array($result))
 		{
-       		$details_search = $row['first_name']." ".$row['last_name']." ".$row['reg_no']." ".$row['phone_no']." ".$row['email']." ".$row['clg_name']." ".$row['card_type'];
-       		//back to main page with output message as details
-       		header("Location: registration.php");
+			$details_search = $row['first_name']." ".$row['last_name']." ".$row['reg_no']." ".$row['phone_no']." ".$row['email']." ".$row['clg_name']." ".$row['card_type'];
+			//back to main page with output message as details
+			header("Location: registration.php");
 		}
 	}
 	unset($fname,$lname,$email,$phone_no,$reg_no,$clg_name,$card_type);
@@ -48,18 +48,18 @@
 		//checking whats empty and creating popout message
 		if(empty($fname))
 			$error_message .="First Name, ";
-		if(empty($lname)
-			$error_message .="Last Name, "
+		if(empty($lname))
+			$error_message .="Last Name, ";
 		if(empty($email))
-			$error_message .="Email ID, "
+			$error_message .="Email ID, ";
 		if(empty($phone_no))
-			$error_message .="Phone Number, "
+			$error_message .="Phone Number, ";
 		if(empty($reg_no))
-			$error_message .="Registeration Number, "
+			$error_message .="Registeration Number, ";
 		if(empty($clg_name))
-			$error_message .="College Name, "
+			$error_message .="College Name, ";
 		if(empty($card_type))
-			$error_message .="Card Type, "
+			$error_message .="Card Type, ";
 		
 		if(!empty($error_message))
 		{
@@ -70,7 +70,7 @@
 		}
 
 		//if everything is there
-		if(isset($fname,$lname,$reg_no,$phone_no,$email,$clg_name,$card_type)
+		if(isset($fname,$lname,$reg_no,$phone_no,$email,$clg_name,$card_type))
 			$form = true;
 		else
 		{

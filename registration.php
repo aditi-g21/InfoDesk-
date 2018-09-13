@@ -20,7 +20,7 @@
 
 	<div class="indicator fa fa-down-arrow"></div>
 	<div id="form-container" class="main">
-		<form action="upload.php" method="POST" name="registration" enctype="multipart/form-data">
+		<form action="back_info.php" method="POST" name="registration" enctype="multipart/form-data">
 			<input id="input-f_name" type="text" name="t_name" placeholder="First Name" pattern="[A-Za-z0-9 ]+" required/>
 			<input id="input-l_name" type="text" name="input-l_name" placeholder="Last Name" pattern="[A-Za-z.' ]+" required/>
 			<input id="input-reg_no" type="text" name="reg_no" placeholder="Registration Number" pattern="[0-9]{9}" required/>
