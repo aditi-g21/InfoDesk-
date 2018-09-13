@@ -30,7 +30,7 @@
 				<input type="text" placeholder="Username" name="infousername" id="info_usr" >
 				<input type="password" placeholder="Password" name="infopassword" id="info_pass" >
 			</div>
-			<a href="login.php">
+			<a href="login_backend.php">
 				<button>log in</button>
 			</a>
 		</form>

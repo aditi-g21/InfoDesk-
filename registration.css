@@ -91,12 +91,12 @@ input {
 	padding: 6%;
 }
 
-#input-f_name, #input-l_name, #input-reg_no, #input-em_id {
+#fname, #lname, #reg, #email {
 	grid-column: 1 / 3;
 	padding: 2.5%;
 }
 
-#input-ph_no, #input-insti {
+#phone, #clg {
 	grid-column: 1 / 2;
 }
 
