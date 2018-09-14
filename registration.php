@@ -19,6 +19,7 @@
 
 	<h1> Registration Page </h1>
 	<div class="indicator fa fa-down-arrow"></div>
+	
 	<div id="block-container" >
 		<div id="form-container" class="main">
 			<form action="back_info.php" method="POST" name="registration" enctype="multipart/form-data">
