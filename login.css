@@ -145,10 +145,11 @@ select
 }
 
 
-#block-container #logout_form
+#logout_form
 {
 	display: grid;
 	grid-gap: .75%;
+	max-height: 40px;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(2, 1fr);
 }
