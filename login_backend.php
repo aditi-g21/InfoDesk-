@@ -34,12 +34,14 @@
 			if($numrows==1)
 			{
 				//loging status
-				$login=mysqli_query($connect, "SELECT status FROM data WHERE sys_pass='$sys_usr'");//all will point to same thing
+				$login=mysqli_query($connect, "SELECT status FROM data WHERE sys_pass='$sys_usr'");
+				//all will point to same thing
 				if($login==1)
 				{
 					$message="Already logged in from another device
 							\nCant login from more than 1 device";
 					$_SESSION['message'] = $message;
+					$_SESSION['sys_usr']=$sys_usr;
 					header("Location: login.php");
 				}
 				else
@@ -53,7 +55,7 @@
 			else
 			{
 				$error_message = "Wrong";
-				$user="SELECT * FROM data WHERE sys_username ='$sys_usr'";
+				$user='SELECT * FROM data WHERE sys_username ="'.$sys_usr.'"';
 				$check=mysqli_query($connect,$user);
 				$row_count=mysqli_num_rows($check);
 				
@@ -62,7 +64,7 @@
 				else
 					$error_message .=" System Admin username";
 				
-				$user="SELECT * FROM data WHERE info_username = '$info_usr'";
+				$user='SELECT * FROM data WHERE info_username ="'.$info_usr.'"';
 				$check=mysqli_query($connect,$user);
 				$row_count=mysqli_num_rows($check);
 				
