@@ -36,7 +36,7 @@
 			<input id="search" type="button" onclick="location.href='search.php';" name="search" value="search" />
 		</form>
 
-		<form>
+		<form action="back_info.php" method="POST">
 			<input id="logout" type="submit" name="logout" value="logout" />
 		</form>
 	</div>
