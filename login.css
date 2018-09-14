@@ -70,7 +70,7 @@ select
 	color: #8f8f8b; 
 }
 
-#logout, #register, #search 
+#register, #search, #logout, #login 
 {
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
@@ -87,7 +87,7 @@ select
 	cursor: pointer;
 }
 
-#logout
+#logout,#login
 {
 	grid-column: 1 / 2;
 }
@@ -104,7 +104,7 @@ select
 	grid-column: 2 / 3;
 }
 
-#logout:hover, #register:hover, #search:hover
+#logout:hover, #register:hover, #search:hover, #login:hover
 {
 	background: #436337;
 }
