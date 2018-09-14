@@ -143,3 +143,13 @@ select
 {
 	grid-column: 1 / 4;
 }
+
+
+#logout_form
+{
+	display: grid;
+	grid-gap: .75%;
+	max-height: 40px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
