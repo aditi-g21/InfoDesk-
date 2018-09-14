@@ -15,8 +15,7 @@
 	echo "hello";
 	unset($login,$message);
 	
-	if($_POST['login'])
-	{
+	
 		echo "hello";
 		unset($sys_usr,$sys_pass,$info_usr,$info_pass,$error_message);
 		
@@ -98,6 +97,5 @@
 			$_SESSION['error_message'] = $error_message;
 			header("Location: login.php");
 		}
-	}
 	//header("Location: login.php");
 ?>
