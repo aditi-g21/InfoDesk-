@@ -24,7 +24,7 @@
 			<input id="fname" type="text" name="fname" placeholder="First Name" pattern="[A-Za-z0-9 ]+" required/
 			<input id="lname" type="text" name="lname" placeholder="Last Name" pattern="[A-Za-z.' ]+" required/>
 			<input id="reg" type="text" name="reg" placeholder="Registration Number" pattern="[0-9]{9}" required/>
-			<input id="phone" type="text" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" required/
+			<input id="phone" type="text" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" required/>
 			<select id="card_type" name="card_type" placeholder="Card Type" required/>
 				<option value="" hidden>Card Type</option>
 				<option value="1">One</option>
