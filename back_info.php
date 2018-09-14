@@ -17,8 +17,9 @@
 		$fname=$_POST['fname'];
 		$lname=$_POST['lname'];
 		$phone_no=$_POST['phone'];
+		$delegate=$_POST['del_id'];
 
-		$sql='SELECT * FROM information WHERE first_name = "'.$fname.'" OR last_name LIKE "'.$lname.'" OR phone_no LIKE "'.$phone_no.'"';
+		$sql="SELECT * FROM information WHERE 'first_name' = $fname OR 'last_name' = $lanme OR 'phone_no' = $phone_no OR 'id' = $delegate";
 		$result = mysqli_query($connect,$sql);//need to add delegate number
 
 		while ($row = mysqli_fetch_array($result))
@@ -30,7 +31,7 @@
 	}
 
 	unset($fname,$lname,$email,$phone_no,$reg_no,$clg_name,$card_type);
-	
+
 	if(isset($_POST['register']))
 	{
 		$form=false;
