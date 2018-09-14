@@ -22,15 +22,15 @@
 		<form method="post">
 			<div>
 				<h2>System Admin</h2>
-				<input type="text" placeholder="Username" name="sausername" id="sys_usr">
-				<input type="password" placeholder="Password" name="sapassword" id="sys_pass" >
+				<input type="text" placeholder="Username" name="sys_usr" id="sys_usr">
+				<input type="password" placeholder="Password" name="sys_pass" id="sys_pass" >
 			</div>
 			<div>
 				<h2>Info-Desk Organizer</h2>
-				<input type="text" placeholder="Username" name="infousername" id="info_usr" >
-				<input type="password" placeholder="Password" name="infopassword" id="info_pass" >
+				<input type="text" placeholder="Username" name="info_usr" id="info_usr" >
+				<input type="password" placeholder="Password" name="info_pass" id="info_pass" >
 			</div>
-			<input id="logout" type="button" onclick="location.href='registration.php';" name="logout" value="login" />
+			<input id="login" type="button" onclick="location.href='login_backend.php';" name="login" value="login" />
 		</form>
 	</div>
 	<div>

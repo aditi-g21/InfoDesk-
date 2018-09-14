@@ -1,0 +1,11 @@
+CREATE DATABASE arsh;
+USE arsh;
+
+CREATE TABLE data(
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    sys_username VARCHAR(32) NOT NULL,
+    sys_password VARCHAR(32) NOT NULL,
+    info_username VARCHAR(32) NOT NULL,
+    info_password VARCHAR(32) NOT NULL,
+    status BOOLEAN DEFAULT 0 NOT NULL
+);
