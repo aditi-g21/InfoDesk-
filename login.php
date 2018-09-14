@@ -19,7 +19,7 @@
 	<h1> Infodesk Portal </h1>
 
 	<div class="main">
-		<form method="post">
+		<form method="POST" action="login_backend.php">
 			<div>
 				<h2>System Admin</h2>
 				<input type="text" placeholder="Username" name="sys_usr" id="sys_usr">
@@ -30,7 +30,7 @@
 				<input type="text" placeholder="Username" name="info_usr" id="info_usr" >
 				<input type="password" placeholder="Password" name="info_pass" id="info_pass" >
 			</div>
-			<input id="login" type="button" onclick="location.href='login_backend.php';" name="login" value="login" />
+			<input id="login" type="submit" name="login" value="login" />
 		</form>
 	</div>
 	<div>

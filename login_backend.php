@@ -1,11 +1,10 @@
 <?php
-
 	session_start();
 
 	//connecting to database
 	$dbhost='localhost';
 	$dbuser='root';
-	$dbpass='';
+	$dbpass='manipaldwarka@D502';
 	$dbname='arsh';
 	$connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	if(mysqli_connect_errno())
@@ -13,10 +12,12 @@
 		die('database connection failed');
 	}
 	echo "hello";
-	unset($login,$message);
-	
-	
-		echo "hello";
+	unset($login, $message);
+
+	if(isset($_POST['login']))
+	{
+
+		echo "blrh";
 		unset($sys_usr,$sys_pass,$info_usr,$info_pass,$error_message);
 		
 		$sys_usr=$_POST['sys_pass'];
@@ -98,4 +99,5 @@
 			header("Location: login.php");
 		}
 	//header("Location: login.php");
+	}
 ?>
