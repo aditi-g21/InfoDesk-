@@ -148,7 +148,7 @@ select
 #logout_form
 {
 	display: grid;
-	max-height: 50px;
+	max-height: 25px;
 	grid-gap: .75%;
 	grid-template-columns: repeat(4, 1fr);
 }

@@ -24,7 +24,7 @@
 				<h2>System Admin</h2>
 				<input type="text" placeholder="Username" name="sys_usr" id="sys_usr" required>
 				<div class="error">
-					hi
+					
 				</div>
 				<input type="password" placeholder="Password" name="sys_pass" id="sys_pass" required>
 				<div class="error">
