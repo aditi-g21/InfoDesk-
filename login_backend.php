@@ -34,11 +34,9 @@
 			if($numrows==1)
 			{
 				//loging status
-				echo "1";
 				$login=mysqli_query($connect, "SELECT status FROM data WHERE sys_pass='$sys_usr'");//all will point to same thing
 				if($login==1)
 				{
-					echo "2";
 					$message="Already logged in from another device
 							\nCant login from more than 1 device";
 					$_SESSION['message'] = $message;
@@ -46,7 +44,6 @@
 				}
 				else
 				{
-					echo "3";
 					//login status = 1 in database
 					$insert='UPDATE data SET status=1 WHERE sys_username= "'.$sys_usr.'"';
 					if($connect->query($insert))
@@ -55,7 +52,6 @@
 			}
 			else
 			{
-				echo "4";
 				$error_message = "Wrong";
 				$user="SELECT * FROM data WHERE sys_username ='$sys_usr'";
 				$check=mysqli_query($connect,$user);
@@ -85,7 +81,6 @@
 		//either no input or username or password
 		else
 		{
-			echo "5";
 			if(empty($sys_usr))
 				$error_message .= "System Admin username ";
 			if(empty($sys_pass))
