@@ -24,7 +24,7 @@
 			<input id="lname" type="text" name="lname" placeholder="Last Name" pattern="[A-Za-z.' ]+" />
 			<input id="phone" type="text" name="phone" placeholder="Phone Number" pattern="[0-9]{10}"/>
 			<input id="del_id" type="text" name="del_id" placeholder="Delegate ID" pattern="[0-9]" />
-			<input id="register" type="submit" onclick="location.href='registration.php';" name="register" value="register" />
+			<input id="register" type="submit" onclick="location.href='registration.php';" name="register" value="Back" />
 			<input id="search" type="submit" name="submit" value="Search"/>
 		</form>
 		<form>
