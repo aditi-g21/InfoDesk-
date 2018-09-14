@@ -23,12 +23,24 @@
 			<div>
 				<h2>System Admin</h2>
 				<input type="text" placeholder="Username" name="sys_usr" id="sys_usr">
+				<div class="error">
+					
+				</div>
 				<input type="password" placeholder="Password" name="sys_pass" id="sys_pass" >
+				<div class="error">
+					
+				</div>
 			</div>
 			<div>
 				<h2>Info-Desk Organizer</h2>
 				<input type="text" placeholder="Username" name="info_usr" id="info_usr" >
+				<div class="error">
+					
+				</div>
 				<input type="password" placeholder="Password" name="info_pass" id="info_pass" >
+				<div class="error">
+					
+				</div>
 			</div>
 			<input id="login" type="submit" name="login" value="login" />
 		</form>
