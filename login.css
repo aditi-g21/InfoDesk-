@@ -143,3 +143,12 @@ select
 {
 	grid-column: 1 / 4;
 }
+
+
+#block-container #logout_form
+{
+	display: grid;
+	grid-gap: .75%;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
