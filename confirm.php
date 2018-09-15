@@ -18,13 +18,22 @@
 
 	<h1> Infodesk Portal </h1>
 
-	<div class="main">
-		
-			
+	<h1> Confirm </h1>
 
+	<div id="block-container" >
+		<div id="form-container" class="main">
+			<form action="back_info.php" method="POST" name="registration" enctype="multipart/form-data">
 
-		
+				<div class="error">
+					
+				</div>
+				
+				<input id="register" type="submit" onclick="location.href='registration.php';" name="register" value="Back" />
+				<input id="confirm" type="submit" name="confirm" value="Confirm"/>
+			</form>
+		</div>
 	</div>
+
 	<div>
 		<h2 id="designedby"> Designed by System Admin in MIT, Manipal</h2>
 	</div>
