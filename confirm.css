@@ -88,12 +88,6 @@ select
 	cursor: pointer;
 }
 
-.error 
-{
-	text-align: center;
-	color: red;
-}
-
 #logout,#login
 {
 	grid-column: 2 / 4;
@@ -136,7 +130,6 @@ select
 	width: 100%;
 	grid-column: 1 / 5;
 	color: #092601;
-	margin: 2% auto;
 	font-size: 1rem;
 }
 

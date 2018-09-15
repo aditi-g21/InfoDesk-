@@ -88,12 +88,6 @@ select
 	cursor: pointer;
 }
 
-.error 
-{
-	text-align: center;
-	color: red;
-}
-
 #logout,#login
 {
 	grid-column: 2 / 4;

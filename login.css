@@ -90,8 +90,13 @@ select
 
 .error 
 {
-	text-align: center;
-	color: red;
+	text-align: left;
+	font-weight: bold;
+	width: 100%;
+	grid-column: 1 / 5;
+	color: #ed4040;
+	margin: 1% auto;
+	font-size: 1rem;
 }
 
 #logout,#login
