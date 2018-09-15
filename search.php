@@ -16,7 +16,7 @@
 	<div class="fog__img fog__img--first"></div>
 	<div class="fog__img fog__img--second"></div>
 
-	<h1> Infodesk Portal </h1>
+	<h1> Search </h1>
 
 	<div id="block-container" >
 		<div id="form-container" class="main">
