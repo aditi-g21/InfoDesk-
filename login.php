@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -24,11 +25,8 @@
 				<h2>System Admin</h2>
 				<input type="text" placeholder="Username" name="sys_usr" id="sys_usr" required>
 				<div class="error">
-					
-				</div>
-				<input type="password" placeholder="Password" name="sys_pass" id="sys_pass" required>
 				<div class="error">
-					
+					<?php echo isset($_SESSION['error_message']? $_SESSION['error_message'] : '' ?>
 				</div>
 			</div>
 			<div>
