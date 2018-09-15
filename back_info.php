@@ -31,7 +31,7 @@
 	}
 
 	unset($fname,$lname,$email,$phone_no,$reg_no,$clg_name,$card_type);
-
+	
 	if(isset($_POST['register']))
 	{
 		$form=false;
@@ -90,9 +90,10 @@
 		if($form==true)
 		{
 			//inserting values
+			echo "1";
 			$sql = "INSERT INTO information (first_name, last_name, email,reg_no,phone_no,clg_name,card_type)
 				VALUES ('$fname','$lname','$email','$reg_no','$phone_no','$clg_name','$card_type' )";
-
+			header("Location: confirm.php");
 			//checking if its done or not
 			if ($connect->query($sql) === true) 
     			$message = "New record created successfully";
@@ -100,17 +101,21 @@
     			$message = "Error: " . $sql . "<br>" . $connect->error;
 		}
 
-		//no matter the messages should be shown
-		if(!empty($error_message))
-			$_SESSION['message'] = $error_message;	
 		else
-			$_SESSION['message'] = $message;
-		header("Location: registration.php");
+		{
+			//no matter the messages should be shown
+			if(!empty($error_message))
+				$_SESSION['message'] = $error_message;	
+			else
+				$_SESSION['message'] = $message;
+			header("Location: registration.php");
+		}
+		
 	}
 	if(isset($_POST['logout']))
 	{
 		$insert='UPDATE data SET status=0 WHERE sys_username= "'.$_SESSION['sys_usr'].'"';
-		 if($connect->query($insert))
+		 //if($connect->query($insert))
 			header("Location: registration.php");
 	}
 ?>
