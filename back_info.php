@@ -11,6 +11,18 @@
 		die('database connection failed');
 	}
 
+	if(isset($_POST['confirm']))
+	{
+		//inserting values
+		$sql = "INSERT INTO information (first_name, last_name, email,reg_no,phone_no,clg_name,card_type)
+				VALUES ('$fname','$lname','$email','$reg_no','$phone_no','$clg_name','$card_type' )";
+				//checking if its done or not
+		if ($connect->query($sql) === true) 
+    		$message = "New record created successfully";
+		else 
+    		$message = "Error: " . $sql . "<br>" . $connect->error;
+
+	}
 	// search for the value
 	if(isset($_POST['search']))
 	{
@@ -89,16 +101,18 @@
 		
 		if($form==true)
 		{
-			//inserting values
-			echo "1";
-			$sql = "INSERT INTO information (first_name, last_name, email,reg_no,phone_no,clg_name,card_type)
-				VALUES ('$fname','$lname','$email','$reg_no','$phone_no','$clg_name','$card_type' )";
+			//pass the values for confirm page
+			$_SESSION['fname'] = $fname;
+			$_SESSION['lname'] = $lname;
+			$_SESSION['reg'] = $reg_no;
+			$_SESSION['clg'] = $clg_name;
+			$_SESSION['card_type'] = $card_type;
+			$_SESSION['phone'] = $phone_no;
+			$_SESSION['email'] = $email;
+
+			
 			header("Location: confirm.php");
-			//checking if its done or not
-			if ($connect->query($sql) === true) 
-    			$message = "New record created successfully";
-			else 
-    			$message = "Error: " . $sql . "<br>" . $connect->error;
+			
 		}
 
 		else

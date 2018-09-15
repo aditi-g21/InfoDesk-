@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -24,10 +25,23 @@
 		<div id="form-container" class="main">
 			<form action="back_info.php" method="POST" name="registration" enctype="multipart/form-data">
 
+
+				<div class="error">
+					<?php 
+						echo $_SESSION['fname']."<br/>";
+						echo $_SESSION['lname']."<br/>";
+						echo $_SESSION['reg']."<br/>";
+						echo $_SESSION['clg']."<br/>";
+						echo $_SESSION['card_type']."<br/>";
+						echo $_SESSION['phone']."<br/>";
+						echo $_SESSION['email']."<br/>";
+					?>
+				</div>
 				
 				<input id="register" type="submit" onclick="location.href='registration.php';" name="register" value="Back" />
 				<input id="confirm" type="submit" name="confirm" value="Confirm"/>
 			</form>
+
 		</div>
 	</div>
 
