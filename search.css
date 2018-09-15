@@ -134,16 +134,11 @@ select
 #reg,
 #email, 
 #clg,
-#del_id
+#del_id,
+#phone
 {
 	grid-column: 1 / 5;
 }
-
-#phone
-{
-	grid-column: 1 / 4;
-}
-
 
 #logout_form
 {
