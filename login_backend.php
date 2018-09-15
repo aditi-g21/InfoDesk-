@@ -5,7 +5,7 @@
 	$dbhost='localhost';
 	$dbuser='root';
 	$dbpass='';
-	$dbname='arsh';
+	$dbname='details';
 	$connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	if(mysqli_connect_errno())
 	{
@@ -19,7 +19,7 @@
 		
 		unset($sys_usr,$sys_pass,$info_usr,$info_pass,$error_message);
 		
-		$sys_usr=$_POST['sys_pass'];
+		$sys_usr=$_POST['sys_usr'];
 		$sys_pass=$_POST['sys_pass'];
 		$info_pass=$_POST['info_pass'];
 		$info_usr=$_POST['info_usr'];
@@ -30,7 +30,7 @@
 			$sql='SELECT * FROM data WHERE sys_username ="'.$sys_usr.'" AND sys_password = "'.$sys_pass.'" AND info_username = "'.$info_usr.'" AND info_password = "'.$info_pass.'"';
 			$row=mysqli_query($connect,$sql);
 			$numrows=mysqli_num_rows($row);
-			echo $numrows . "\n";
+			echo $numrows;
 			if($numrows==1)
 			{
 				//loging status
@@ -46,7 +46,8 @@
 				}
 				else
 				{
-					//login status = 1 in database
+					//login status != 1 in database
+					$_SESSION['sys_usr']=$sys_usr;
 					$insert='UPDATE data SET status=1 WHERE sys_username= "'.$sys_usr.'"';
 					if($connect->query($insert))
 						header("Location: registration.php");
@@ -60,7 +61,7 @@
 				$row_count=mysqli_num_rows($check);
 				
 				if($row_count==1)
-					$_SESSION['system_username'] = $sys_usr;
+					$_SESSION['sys_usr'] = $sys_usr;
 				else
 					$error_message .=" System Admin username";
 				
@@ -95,7 +96,7 @@
 
 			//back to login page with showing the error message
 			$_SESSION['error_message'] = $error_message;
-			//header("Location: login.php");
+			header("Location: login.php");
 		}
 	}
 ?>
