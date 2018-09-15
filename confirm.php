@@ -24,9 +24,6 @@
 		<div id="form-container" class="main">
 			<form action="back_info.php" method="POST" name="registration" enctype="multipart/form-data">
 
-				<div class="error">
-					
-				</div>
 				
 				<input id="register" type="submit" onclick="location.href='registration.php';" name="register" value="Back" />
 				<input id="confirm" type="submit" name="confirm" value="Confirm"/>
