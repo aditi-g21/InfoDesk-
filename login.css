@@ -126,7 +126,7 @@ select
 	display: grid;
 	grid-gap: .75%;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(8, 1fr);
+	grid-template-rows: repeat(7, 1fr) 15px;
 }
 
 #fname,
