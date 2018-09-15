@@ -30,7 +30,7 @@
 				<input id="register" type="button" onclick="location.href='registration.php';" name="register" value="Back" />
 				<input id="search" type="submit" name="submit" value="Search"/>
 			</form>
-			<form id="logout_form">
+			<form id="logout_form" action="back_info.php" method="POST">
 				<input id="logout" type="submit" name="logout" value="logout" />
 			</form>
 		</div>

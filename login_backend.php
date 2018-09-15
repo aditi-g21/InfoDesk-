@@ -11,11 +11,10 @@
 	{
 		die('database connection failed');
 	}
-	unset($login, $message);
+	unset($login, $message,$_SESSION['error_message'],$_SESSION['sys_usr'],$_SESSION['info_usr']);
 
 	if(isset($_POST['login']))
 	{
-
 		
 		unset($sys_usr,$sys_pass,$info_usr,$info_pass,$error_message);
 		
@@ -53,28 +52,37 @@
 						header("Location: registration.php");
 				}	
 			}
+
 			else
 			{
-				$error_message = "Wrong";
+				$error_message = "Wrong ";
+				
 				$user='SELECT * FROM data WHERE sys_username ="'.$sys_usr.'"';
 				$check=mysqli_query($connect,$user);
 				$row_count=mysqli_num_rows($check);
 				
 				if($row_count==1)
+				{
 					$_SESSION['sys_usr'] = $sys_usr;
+					$error_message.="System Admin password, ";
+				}
 				else
-					$error_message .=" System Admin username";
+					$error_message .="System Admin username, ";
 				
 				$user='SELECT * FROM data WHERE info_username ="'.$info_usr.'"';
 				$check=mysqli_query($connect,$user);
 				$row_count=mysqli_num_rows($check);
 				
 				if($row_count==1)
-					$_SESSION['infodesk_username'] = $info_usr;
+				{
+					$_SESSION['info_usr'] = $info_usr;
+					$error_message.="Infodesk password, ";
+				}
 				else
-					$error_message .=" Infodesk username ";
+					$error_message .="Infodesk username, ";
 
 				//no matter the messages should be shown
+				$error_message = substr($error_message, 0, strlen($error_message)-2);
 				$_SESSION['error_message'] = $error_message;
 				header("Location: login.php");
 				//back to login page with error message

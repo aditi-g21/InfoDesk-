@@ -66,7 +66,7 @@
 					?>
 				</div>
 
-				<input id="register" type="submit" onclick="location.href='registration.php';" name="register" value="Back" />
+				<input id="register" type="button" onclick="location.href='registration.php';" name="register" value="Back" />
 				<input id="confirm" type="submit" name="confirm" value="Confirm"/>
 			</form>
 

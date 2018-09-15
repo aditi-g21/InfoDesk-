@@ -23,24 +23,18 @@
 		<form method="POST" action="login_backend.php">
 			<div>
 				<h2>System Admin</h2>
-				<input type="text" placeholder="Username" name="sys_usr" id="sys_usr" required>
-				<div class="error">
-				<div class="error">
-					<?php echo isset($_SESSION['error_message']? $_SESSION['error_message'] : '' ?>
-				</div>
+				<input type="text" placeholder="Username" name="sys_usr" id="sys_usr" value ="<?php if(isset($_SESSION['sys_usr'])) {echo($_SESSION['sys_usr']);} ?>" required>
+				<input type="password" placeholder="Password" name="sys_pass" id="sys_pass" required>
 			</div>
 			<div>
 				<h2>Info-Desk Organizer</h2>
-				<input type="text" placeholder="Username" name="info_usr" id="info_usr" required >
-				<div class="error">
-					
-				</div>
+				<input type="text" placeholder="Username" name="info_usr" id="info_usr" value ="<?php if(isset($_SESSION['info_usr'])) {echo($_SESSION['info_usr']);} ?>" required >
 				<input type="password" placeholder="Password" name="info_pass" id="info_pass" required>
-				<div class="error">
-					
-				</div>
 			</div>
 			<input id="login" type="submit" name="login" value="login" />
+			<div class="error">
+					<?php echo (isset($_SESSION['error_message'])? $_SESSION['error_message'] : ''); ?>
+			</div>
 		</form>
 	</div>
 	<div>
