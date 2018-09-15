@@ -71,7 +71,7 @@ select
 	color: #8f8f8b; 
 }
 
-#register, #search, #logout, #login
+#register, #search, #logout, #login, #confirm 
 {
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
@@ -99,17 +99,17 @@ select
 	grid-column: 2 / 4;
 }
 
-#search
+#search, #confirm
 {
 	grid-column: 3 / 5;
 }
 
-#register
+#register, #back
 {
 	grid-column: 1 / 3;
 }
 
-#logout:hover, #register:hover, #search:hover, #login:hover
+#logout:hover, #register:hover, #search:hover, #login:hover, #confirm:hover
 {
 	background: #436337;
 }
@@ -127,7 +127,22 @@ select
 	display: grid;
 	grid-gap: .75%;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(5, 1fr) 15px;
+	grid-template-rows: repeat(8, 1fr) 15px;
+}
+
+.confirm_messages
+{
+	text-align: left;
+	width: 100%;
+	grid-column: 1 / 5;
+	color: #092601;
+	margin: 2% auto;
+	font-size: 1rem;
+}
+
+.field
+{
+	font-weight: bold;
 }
 
 #fname,
@@ -135,16 +150,12 @@ select
 #reg,
 #email, 
 #clg,
-#del_id,
-#phone
+#del_id
 {
 	grid-column: 1 / 5;
 }
 
-#logout_form
+#phone
 {
-	display: grid;
-	max-height: 25px;
-	grid-gap: .75%;
-	grid-template-columns: repeat(4, 1fr);
+	grid-column: 1 / 4;
 }

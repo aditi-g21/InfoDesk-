@@ -21,7 +21,8 @@ h2
 h1 
 {
 	margin: .67em 0;
-	color: #143804;
+	color: #0c2302;
+	text-shadow: 1.5px 2px 1.5px;
 	text-transform: uppercase;
 	font-size: 2.0rem;
 	padding-bottom: 2%;
@@ -128,6 +129,7 @@ select
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(7, 1fr) 15px;
 }
+
 
 #fname,
 #lname,
