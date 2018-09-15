@@ -70,7 +70,7 @@ select
 	color: #8f8f8b; 
 }
 
-#register, #search, #logout, #login, #back 
+#register, #search, #logout, #login, #confirm 
 {
 	font-family: "Roboto", sans-serif;
 	text-transform: uppercase;
@@ -98,7 +98,7 @@ select
 	grid-column: 2 / 4;
 }
 
-#search
+#search, #confirm
 {
 	grid-column: 3 / 5;
 }
@@ -108,7 +108,7 @@ select
 	grid-column: 1 / 3;
 }
 
-#logout:hover, #register:hover, #search:hover, #login:hover, #back:hover
+#logout:hover, #register:hover, #search:hover, #login:hover, #confirm:hover
 {
 	background: #436337;
 }
