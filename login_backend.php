@@ -76,7 +76,7 @@
 
 				//no matter the messages should be shown
 				$_SESSION['error_message'] = $error_message;
-				//header("Location: login.php");
+				header("Location: login.php");
 				//back to login page with error message
 			}
 		}

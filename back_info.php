@@ -42,7 +42,7 @@
 			header("Location: login.php");
 	}
 	// search for the value
-	/*if(isset($_POST['search']) && $_POST['search'])
+	if(isset($_POST['search']) && $_POST['search'])
 	{
 		$fname=$_POST['fname'];
 		$lname=$_POST['lname'];
@@ -50,9 +50,9 @@
 		$delegate=$_POST['del_id'];
 
 		// $sql="SELECT * FROM information WHERE 'first_name' = $fname OR 'last_name' = $lname OR 'phone_no' = $phone_no OR 'id' = $delegate";
-		$sql='SELECT * FROM information WHERE first_name ="'.$fname.'" OR last_name = "'.$lname.'" OR phone_no = "'.$phone_no.'" AND id = "'.$delegate.'"';
-		$result = mysqli_query($connect,$sql);//need to add delegate number
-		$_SESSION['users'] = array();
+		$sql='SELECT * FROM information WHERE first_name ="'.$fname.'" OR last_name = "'.$lname.'" OR phone_no = "'.$phone_no.'" OR id = "'.$delegate.'"';
+		// $result = mysqli_query($connect,$sql);//need to add delegate number
+		// $_SESSION['users'] = array();
 		while ($row = mysqli_fetch_array($result))
 		{
 			$details_search = "First Name :- "$row['first_name']."<br\> Last Name :-".$row['last_name']."<br/>Registration Number :-".$row['reg_no']."<br/>Phone Number :-".$row['phone_no']."<br/>Email ID :-".$row['email']."<br/>College Name:-".$row['clg_name']."<br/>Card Type=".$row['card_type'];
@@ -61,7 +61,7 @@
 			//back to main page with output message as details
 			//header("Location: registration.php");
 		}
-	}*/
+	}
 
 	unset($fname,$lname,$email,$phone_no,$reg_no,$clg_name,$card_type);
 	
